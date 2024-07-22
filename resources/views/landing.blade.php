@@ -115,7 +115,7 @@
   </section>
 
   <!-- Extra Benefits -->
-  <section class="container relative pt-[100px]">
+  <section class="container relative pt-[100px]" id="benefit">
     <div class="flex items-center flex-col md:flex-row flex-wrap justify-center gap-8 lg:gap-[120px]">
       <img src="/images/illustration-01.webp" class="w-full lg:max-w-[536px]" alt="">
       <div class="max-w-[268px] w-full">
