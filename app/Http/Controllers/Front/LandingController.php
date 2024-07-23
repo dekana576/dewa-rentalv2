@@ -10,7 +10,10 @@ class LandingController extends Controller
 {
     public function index()
     {
-        $items = Item::with(['type', 'brand'])->latest()->take(4)->get()->reverse();
+        $perPage = 8;
+
+        // Paginate items with relationships, ordered by the latest
+        $items = Item::with(['type', 'brand'])->latest()->paginate($perPage);
 
         return view('landing', [
             'items' => $items
