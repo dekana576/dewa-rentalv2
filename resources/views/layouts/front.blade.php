@@ -19,8 +19,14 @@
           integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
   <!-- Scripts -->
+  <style>
+        #map {
+            height: 65vh;
+            width: 100%;
+        }
+    </style>
   @vite(['resources/css/front.css'])
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <!-- Styles -->
   @livewireStyles
 </head>
@@ -50,11 +56,11 @@
         <div class="hidden w-full lg:block" id="navigation">
           <div class="flex flex-col items-baseline gap-4 mt-6 lg:justify-between lg:flex-row lg:items-center lg:mt-0">
             <div class="flex flex-col w-full ml-auto lg:w-auto gap-4 lg:gap-[50px] lg:items-center lg:flex-row">
-              <a href="#!" class="nav-link-item">Landing</a>
-              <a href="#popularCars" class="nav-link-item">Catalog</a>
-              <a href="#benefit" class="nav-link-item">Benefits</a>
+              <a href="{{ route('front.index') }}" class="nav-link-item">Landing</a>
+              <a href="{{ route('front.index') }}/#popularCars" class="nav-link-item">Catalog</a>
+              <a href="{{ route('front.index') }}/#benefit" class="nav-link-item">Benefits</a>
               <a href="#!" class="nav-link-item">Stories</a>
-              <a href="#!" class="nav-link-item">Maps</a>
+              <a href="{{ route('front.map.show') }}" class="nav-link-item">Maps</a>
             </div>
             @auth
               <div class="flex flex-col w-full ml-auto lg:w-auto lg:gap-12 lg:items-center lg:flex-row">

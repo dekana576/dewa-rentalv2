@@ -12,6 +12,7 @@ use App\Http\Controllers\Front\LandingController;
 use App\Http\Controllers\Front\DetailController;
 use App\Http\Controllers\Front\CheckoutController;
 use App\Http\Controllers\Front\PaymentController;
+use App\Http\Controllers\Front\MapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::name('front.')->group(function () {
     Route::get('/', [LandingController::class, 'index'])->name('index');
     Route::get('/detail/{slug}', [DetailController::class, 'index'])->name('detail');
     Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
+    Route::get('/map', [MapController::class, 'showMap'])->name('map.show');
 
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');

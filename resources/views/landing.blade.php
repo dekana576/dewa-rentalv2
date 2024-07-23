@@ -1,4 +1,4 @@
-~<x-front-layout>
+<x-front-layout>
   <!-- Hero -->
   <section class="container relative pb-[100px] pt-[30px]">
     <div class="flex flex-col items-center justify-center gap-[30px]">
