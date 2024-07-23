@@ -74,7 +74,7 @@
 
   <!-- Popular Cars -->
   <section class="bg-darkGrey" id="popularCars">
-    <div class="container relative py-[100px]">
+    <div class="container relative py-[50px]">
       <header class="mb-[10px]">
         <h2 class="font-bold text-dark text-[26px] mb-1">
           Cars

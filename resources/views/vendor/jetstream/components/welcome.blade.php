@@ -1,90 +1,130 @@
-<div class="p-6 sm:px-20 bg-white border-b border-gray-200">
-    <div>
-        <x-jet-application-logo class="block h-12 w-auto" />
-    </div>
 
-    <div class="mt-8 text-2xl">
-        Welcome to your Jetstream application!
-    </div>
 
-    <div class="mt-6 text-gray-500">
-        Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed
-        to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe
-        you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel
-        ecosystem to be a breath of fresh air. We hope you love it.
+<div class="p-6 bg-white border-b border-gray-200">
+    <h2 class="text-2xl font-bold">Dashboard Admin</h2>
+
+    <div class="mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-blue-50 p-4 rounded-lg shadow-md flex items-center space-x-4">
+                <div class="flex-shrink-0 bg-blue-500 text-white p-3 rounded-full">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Total Users</h3>
+                    <p class="text-2xl font-bold">120</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-green-50 p-4 rounded-lg shadow-md flex items-center space-x-4">
+                <div class="flex-shrink-0 bg-green-500 text-white p-3 rounded-full">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Total Orders</h3>
+                    <p class="text-2xl font-bold">300</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-yellow-50 p-4 rounded-lg shadow-md flex items-center space-x-4">
+                <div class="flex-shrink-0 bg-yellow-500 text-white p-3 rounded-full">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Revenue</h3>
+                    <p class="text-2xl font-bold">$15,000</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
-    <div class="p-6">
-        <div class="flex items-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laravel.com/docs">Documentation</a></div>
-        </div>
+<div class="p-6 bg-white border-b border-gray-200">
+    <h2 class="text-2xl font-bold">Dashboard Analytics</h2>
 
-        <div class="ml-12">
-            <div class="mt-2 text-sm text-gray-500">
-                Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end.
-            </div>
-
-            <a href="https://laravel.com/docs">
-                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                        <div>Explore the documentation</div>
-
-                        <div class="ml-1 text-indigo-500">
-                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </div>
+    <div class="mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 4 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Monthly Sales</h3>
+                <p class="text-2xl font-bold">$5,000</p>
+                <div class="mt-4">
+                    <svg class="w-full h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20">
+                        <rect width="30" height="20" fill="#4F46E5"></rect>
+                        <rect x="30" width="30" height="20" fill="#6366F1"></rect>
+                        <rect x="60" width="40" height="20" fill="#E5E7EB"></rect>
+                    </svg>
                 </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
-        <div class="flex items-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">Laracasts</a></div>
-        </div>
-
-        <div class="ml-12">
-            <div class="mt-2 text-sm text-gray-500">
-                Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
             </div>
 
-            <a href="https://laracasts.com">
-                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                        <div>Start watching Laracasts</div>
-
-                        <div class="ml-1 text-indigo-500">
-                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </div>
+            <!-- Card 5 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">User Growth</h3>
+                <p class="text-2xl font-bold">+20%</p>
+                <div class="mt-4">
+                    <svg class="w-full h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20">
+                        <rect width="50" height="20" fill="#10B981"></rect>
+                        <rect x="50" width="50" height="20" fill="#D1D5DB"></rect>
+                    </svg>
                 </div>
-            </a>
-        </div>
-    </div>
+            </div>
 
-    <div class="p-6 border-t border-gray-200">
-        <div class="flex items-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://tailwindcss.com/">Tailwind</a></div>
-        </div>
-
-        <div class="ml-12">
-            <div class="mt-2 text-sm text-gray-500">
-                Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.
+            <!-- Card 6 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Pending Orders</h3>
+                <p class="text-2xl font-bold">45</p>
+                <div class="mt-4">
+                    <div class="bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-red-500 h-2.5 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <p class="text-sm mt-2 text-gray-600">30% of orders pending</p>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="p-6 border-t border-gray-200 md:border-l">
-        <div class="flex items-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Authentication</div>
-        </div>
+<div class="p-6 bg-white border-b border-gray-200">
+    <h2 class="text-2xl font-bold">Recent Activity</h2>
 
-        <div class="ml-12">
-            <div class="mt-2 text-sm text-gray-500">
-                Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application.
-            </div>
+    <div class="mt-6">
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+            <ul class="space-y-4">
+                <!-- Activity 1 -->
+                <li class="flex items-center space-x-4">
+                    <div class="bg-blue-500 text-white p-2 rounded-full">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div>
+                        <p class="text-lg font-semibold">New user registered</p>
+                        <span class="text-sm text-gray-600">2 hours ago</span>
+                    </div>
+                </li>
+
+                <!-- Activity 2 -->
+                <li class="flex items-center space-x-4">
+                    <div class="bg-green-500 text-white p-2 rounded-full">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <p class="text-lg font-semibold">Order #1234 completed</p>
+                        <span class="text-sm text-gray-600">4 hours ago</span>
+                    </div>
+                </li>
+
+                <!-- Activity 3 -->
+                <li class="flex items-center space-x-4">
+                    <div class="bg-yellow-500 text-white p-2 rounded-full">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div>
+                        <p class="text-lg font-semibold">Revenue milestone reached</p>
+                        <span class="text-sm text-gray-600">1 day ago</span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
