@@ -19,7 +19,7 @@
 
             // Add tile layer
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Dewa Rental Bali'
+                attribution: 'Dewa Re'
             }).addTo(map);
 
             // Add a marker

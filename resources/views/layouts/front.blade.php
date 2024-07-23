@@ -59,7 +59,7 @@
               <a href="{{ route('front.index') }}" class="nav-link-item">Landing</a>
               <a href="{{ route('front.index') }}/#popularCars" class="nav-link-item">Catalog</a>
               <a href="{{ route('front.index') }}/#benefit" class="nav-link-item">Benefits</a>
-              <a href="#!" class="nav-link-item">Stories</a>
+              <a href="{{ route('front.history.show') }}" class="nav-link-item">Stories</a>
               <a href="{{ route('front.map.show') }}" class="nav-link-item">Maps</a>
             </div>
             @auth
