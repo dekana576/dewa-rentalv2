@@ -1,4 +1,4 @@
-<x-front-layout>
+~<x-front-layout>
   <!-- Hero -->
   <section class="container relative pb-[100px] pt-[30px]">
     <div class="flex flex-col items-center justify-center gap-[30px]">
@@ -75,13 +75,27 @@
   <!-- Popular Cars -->
   <section class="bg-darkGrey" id="popularCars">
     <div class="container relative py-[100px]">
-      <header class="mb-[30px]">
+      <header class="mb-[10px]">
         <h2 class="font-bold text-dark text-[26px] mb-1">
           Cars
         </h2>
         <p class="text-base text-secondary">Start your big day</p>
       </header>
-
+      <!-- search bar -->
+       <div class="">
+         
+       <div class="flex justify-center py-6">
+            <form action="{{ url('/') }}" method="GET" class="w-full max-w-xl flex bg-white shadow-lg rounded-full overflow-hidden">
+                <input type="text" name="query" value="{{ request('query') }}" class="form-input w-full px-6 py-3 text-gray-700 focus:ring-2 focus:ring-blue-500 border-none" placeholder="Search items...">
+                <button type="submit" class="bg-blue-500 text-white px-6 py-3 flex items-center justify-center hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 border-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21a9 9 0 100-18 9 9 0 000 18zM21 21l-4.35-4.35" />
+                    </svg>
+                    Search
+                </button>
+            </form>
+        </div>
+       </div>
       <!-- Cars -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-[29px]">
         @foreach ($items as $item)
@@ -112,7 +126,9 @@
         @endforeach
 
       </div>
-      {{ $items->links() }}
+      <div class="pt-3">
+        {{ $items->links() }}
+      </div>
     </div>
   </section>
 
