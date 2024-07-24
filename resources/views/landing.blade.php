@@ -15,7 +15,7 @@
           </div>
         </div>
         <img src="/images/porsche.webp" class="w-full max-w-[963px] z-10 relative" alt="" data-aos="zoom-in"
-             data-aos-delay="950">
+          data-aos-delay="950">
       </div>
 
       <div class="flex flex-col lg:flex-row items-center justify-around lg:gap-[60px] gap-7">
@@ -64,8 +64,8 @@
               Rent Now
             </p>
             <img src="/svgs/ic-arrow-right.svg"
-                 class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-[320ms]"
-                 alt="">
+              class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-[320ms]"
+              alt="">
           </a>
         </div>
       </div>
@@ -82,48 +82,55 @@
         <p class="text-base text-secondary">Start your big day</p>
       </header>
       <!-- search bar -->
-       <div class="">
-         
-       <div class="flex justify-center py-6">
-            <form action="{{ url('/') }}" method="GET" class="w-full max-w-xl flex bg-white shadow-lg rounded-full overflow-hidden">
-                <input type="text" name="query" value="{{ request('query') }}" class="form-input w-full px-6 py-3 text-gray-700 focus:ring-2 focus:ring-blue-500 border-none" placeholder="Search items...">
-                <button type="submit" class="bg-blue-500 text-white px-6 py-3 flex items-center justify-center hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 border-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21a9 9 0 100-18 9 9 0 000 18zM21 21l-4.35-4.35" />
-                    </svg>
-                    Search
-                </button>
-            </form>
+      <div class="">
+
+        <div class="flex justify-center py-6">
+          <form action="{{ url('/') }}" method="GET"
+            class="w-full max-w-xl flex bg-white shadow-lg rounded-full overflow-hidden">
+            <input type="text" name="query" value="{{ request('query') }}"
+              class="form-input w-full px-6 py-3 text-gray-700 focus:ring-2 focus:ring-blue-500 border-none"
+              placeholder="Search items...">
+            <button type="submit"
+              class="bg-blue-500 text-white px-6 py-3 flex items-center justify-center hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 border-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 21a9 9 0 100-18 9 9 0 000 18zM21 21l-4.35-4.35" />
+              </svg>
+              Search
+            </button>
+          </form>
         </div>
-       </div>
+      </div>
       <!-- Cars -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-[29px]">
         @foreach ($items as $item)
-          <!-- Card -->
-          <div class="card-popular">
-            <div>
-              <h5 class="text-lg text-dark font-bold mb-[2px]">
-                {{ $item->name }}
-              </h5>
-              <p class="text-sm font-normal text-secondary">
-                {{ $item->type ? $item->type->name : '-' }}
-              </p>
-              <a href="{{ route('front.detail', $item->slug) }}" class="absolute inset-0"></a>
-            </div>
-            <img src="{{ $item->thumbnail }}" class="rounded-[18px] min-w-[216px] w-full h-[150px]" alt="">
-            <div class="flex items-center justify-between gap-1">
-              <!-- Price -->
-              <p class="text-sm font-normal text-secondary">
-                <span class="text-base font-bold text-primary">{{ "Rp " . number_format($item->price,2,',','.') }}</span>/day
-              </p>
-              <!-- Rating -->
-              <p class="text-dark text-xs font-semibold flex items-center gap-[2px]">
-                ({{ $item->star }}/5)
-                <img src="/svgs/ic-star.svg" alt="">
-              </p>
-            </div>
-          </div>
-        @endforeach
+      <!-- Card -->
+      <div class="card-popular">
+        <div>
+        <h5 class="text-lg text-dark font-bold mb-[2px]">
+          {{ $item->name }}
+        </h5>
+        <p class="text-sm font-normal text-secondary">
+          {{ $item->type ? $item->type->name : '-' }}
+        </p>
+        <a href="{{ route('front.detail', $item->slug) }}" class="absolute inset-0"></a>
+        </div>
+        <img src="{{ $item->thumbnail }}" class="rounded-[18px] min-w-[216px] w-full h-[150px]" alt="">
+        <div class="flex items-center justify-between gap-1">
+        <!-- Price -->
+        <p class="text-sm font-normal text-secondary">
+          <span
+          class="text-base font-bold text-primary">{{ "Rp " . number_format($item->price, 2, ',', '.') }}</span>/day
+        </p>
+        <!-- Rating -->
+        <p class="text-dark text-xs font-semibold flex items-center gap-[2px]">
+          ({{ $item->star }}/5)
+          <img src="/svgs/ic-star.svg" alt="">
+        </p>
+        </div>
+      </div>
+    @endforeach
 
       </div>
       <div class="pt-3">
@@ -199,8 +206,8 @@
                 Explore Cars
               </p>
               <img src="/svgs/ic-arrow-right.svg"
-                   class="transition-all duration-[320ms] opacity-0 group-hover:opacity-100 group-hover:translate-x-10"
-                   alt="">
+                class="transition-all duration-[320ms] opacity-0 group-hover:opacity-100 group-hover:translate-x-10"
+                alt="">
             </a>
           </div>
         </div>
@@ -214,104 +221,89 @@
       <h2 class="font-bold text-dark text-[26px] mb-1">
         Frequently Asked Questions
       </h2>
-      <p class="text-base text-secondary">Learn more about Vrom and get a success</p>
+      <p class="text-base text-secondary">Dewa Rental Bali</p>
     </header>
 
     <!-- Questions -->
     <div class="grid md:grid-cols-2 gap-x-[50px] gap-y-6 max-w-[910px] w-full mx-auto">
-      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]"
-         id="faq1">
+      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]" id="faq1">
         <div class="flex items-center justify-between gap-1">
           <p class="text-base font-semibold text-dark">
-            What if I crash the car?
+            Apa yang harus saya lakukan jika saya menabrak mobil?
           </p>
           <img src="/svgs/ic-chevron-down-rounded.svg" class="transition-all" alt="">
         </div>
         <div class="hidden pt-4 max-w-[335px]" id="faq1-content">
           <p class="text-base text-dark leading-[26px]">
-            Ipsum top talent busy making race that
-            agreed both party. You can si amet lorem
-            dolor get the rewards after winninng.
+            Jika terjadi kecelakaan, prioritaskan keselamatan dan cari bantuan medis jika diperlukan. Segera hubungi tim
+            layanan pelanggan kami untuk mendapatkan panduan. Kendaraan kami diasuransikan, tetapi mungkin ada biaya
+            tanggungan tergantung pada ketentuan perjanjian sewa Anda.
           </p>
         </div>
       </a>
-      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]"
-         id="faq2">
+      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]" id="faq2">
         <div class="flex items-center justify-between gap-1">
           <p class="text-base font-semibold text-dark">
-            What if I crash the car?
+            Apakah Anda menawarkan penjemputan di bandara?
           </p>
           <img src="/svgs/ic-chevron-down-rounded.svg" class="transition-all" alt="">
         </div>
         <div class="hidden pt-4 max-w-[335px]" id="faq2-content">
           <p class="text-base text-dark leading-[26px]">
-            Ipsum top talent busy making race that
-            agreed both party. You can si amet lorem
-            dolor get the rewards after winninng.
+            ya, kami menawarkan layanan penjemputan dan pengantaran di bandara. Cukup berikan detail penerbangan Anda
+            saat memesan, dan pengemudi kami akan menjemput Anda di area kedatangan dengan mobil sewaan Anda.
           </p>
         </div>
       </a>
-      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]"
-         id="faq3">
+      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]" id="faq3">
         <div class="flex items-center justify-between gap-1">
           <p class="text-base font-semibold text-dark">
-            What if I crash the car?
+          Apa saja persyaratan untuk menyewa mobil?
           </p>
           <img src="/svgs/ic-chevron-down-rounded.svg" class="transition-all" alt="">
         </div>
         <div class="hidden pt-4 max-w-[335px]" id="faq3-content">
           <p class="text-base text-dark leading-[26px]">
-            Ipsum top talent busy making race that
-            agreed both party. You can si amet lorem
-            dolor get the rewards after winninng.
+          Untuk menyewa mobil di Dewa Rental, Anda harus memiliki SIM yang masih berlaku, kartu identitas resmi, dan kartu kredit untuk deposit. Anda juga harus berusia minimal 21 tahun.
           </p>
         </div>
       </a>
-      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]"
-         id="faq4">
+      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]" id="faq4">
         <div class="flex items-center justify-between gap-1">
           <p class="text-base font-semibold text-dark">
-            What if I crash the car?
+          Apakah ada batasan jarak tempuh?
           </p>
           <img src="/svgs/ic-chevron-down-rounded.svg" class="transition-all" alt="">
         </div>
         <div class="hidden pt-4 max-w-[335px]" id="faq4-content">
           <p class="text-base text-dark leading-[26px]">
-            Ipsum top talent busy making race that
-            agreed both party. You can si amet lorem
-            dolor get the rewards after winninng.
+          Sebagian besar kendaraan kami memiliki jarak tempuh tanpa batas. Namun, beberapa mobil mewah mungkin memiliki batasan jarak tempuh. Pastikan untuk memeriksa ketentuan sewa untuk rincian lengkap.
           </p>
         </div>
       </a>
-      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]"
-         id="faq5">
+      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]" id="faq5">
         <div class="flex items-center justify-between gap-1">
           <p class="text-base font-semibold text-dark">
-            What if I crash the car?
+          Bagaimana cara memperpanjang masa sewa?
           </p>
           <img src="/svgs/ic-chevron-down-rounded.svg" class="transition-all" alt="">
         </div>
         <div class="hidden pt-4 max-w-[335px]" id="faq5-content">
           <p class="text-base text-dark leading-[26px]">
-            Ipsum top talent busy making race that
-            agreed both party. You can si amet lorem
-            dolor get the rewards after winninng.
+          Jika Anda ingin memperpanjang masa sewa, hubungi layanan pelanggan kami sebelum masa sewa berakhir. Kami akan membantu Anda memperpanjang sewa sesuai ketersediaan kendaraan..
           </p>
         </div>
       </a>
-      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]"
-         id="faq6">
+      <a href="#!" class="px-6 py-4 border rounded-[24px] border-grey h-min accordion max-w-[430px]" id="faq6">
         <div class="flex items-center justify-between gap-1">
           <p class="text-base font-semibold text-dark">
-            What if I crash the car?
+          Apa yang termasuk dalam biaya sewa?
           </p>
           <img src="/svgs/ic-chevron-down-rounded.svg" class="transition-all" alt="">
         </div>
         <div class="hidden pt-4 max-w-[335px]" id="faq6-content">
           <p class="text-base text-dark leading-[26px]">
-            Ipsum top talent busy making race that
-            agreed both party. You can si amet lorem
-            dolor get the rewards after winninng.
+          Biaya sewa mencakup penggunaan kendaraan, asuransi dasar, dan layanan bantuan darurat 24 jam. Biaya tambahan mungkin berlaku untuk perlengkapan tambahan seperti GPS, kursi bayi, atau layanan penjemputan di bandara.
           </p>
         </div>
       </a>
@@ -337,8 +329,8 @@
               Book Now
             </p>
             <img src="/svgs/ic-arrow-right.svg"
-                 class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-[320ms]"
-                 alt="">
+              class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-[320ms]"
+              alt="">
           </a>
         </div>
       </div>
